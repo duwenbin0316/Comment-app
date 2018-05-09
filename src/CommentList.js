@@ -7,13 +7,18 @@ class CommentList extends React.Component {
         comments: []
     }
 
+    onDeleteCommet(index) {
+        const {onDeleteComment} = this.props
+        onDeleteComment(index)
+    }
+
     render() {
         const {comments} = this.props;
         return (
             <div className="CommentList">
-                {comments.map(t => {
+                {comments.map((t, i) => {
                     return (
-                        <CommentItem comment={t}/>
+                        <CommentItem comment={t} key={i} index={i} onDeleteCommet={this.onDeleteCommet.bind(this)}/>
                     )
                 })}
             </div>

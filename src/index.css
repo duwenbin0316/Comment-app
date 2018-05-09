@@ -55,3 +55,20 @@
 .item-user{
     color: #00f;
 }
+
+.item-timeString{
+    display: block;
+    text-align: right;
+    font-size: 0.8em;
+    color: #666666;
+}
+
+.delete{
+    color: #46f;
+    cursor: pointer;
+}
+
+.CommentItem{
+    border-bottom: 1px solid #eee;
+    margin-bottom: 5px
+}
